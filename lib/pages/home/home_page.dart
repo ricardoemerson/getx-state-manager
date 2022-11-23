@@ -39,6 +39,10 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed('/objects-update'),
               child: const Text('Atualização de Objetos'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/local-state'),
+              child: const Text('Local State'),
+            ),
           ],
         ),
       ),
