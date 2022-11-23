@@ -11,6 +11,8 @@ import 'pages/obs_for_types/obs_for_types_page.dart';
 import 'pages/reactive_types/reactive_types_page.dart';
 import 'pages/workers/ever/ever_controller.dart';
 import 'pages/workers/ever/ever_page.dart';
+import 'pages/workers/interval/interval_controller.dart';
+import 'pages/workers/interval/interval_page.dart';
 import 'pages/workers/once/once_controller.dart';
 import 'pages/workers/once/once_page.dart';
 import 'pages/workers/workers_page.dart';
@@ -56,6 +58,13 @@ class MyApp extends StatelessWidget {
             () => OnceController(),
           ),
           page: () => OncePage(),
+        ),
+        GetPage(
+          name: '/workers/interval',
+          binding: BindingsBuilder.put(
+            () => IntervalController(),
+          ),
+          page: () => IntervalPage(),
         ),
       ],
     );
