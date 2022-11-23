@@ -9,6 +9,8 @@ import 'pages/nullable_generics_reactive_type/nullable_generics_reactive_type_pa
 import 'pages/objects_update/objects_update_page.dart';
 import 'pages/obs_for_types/obs_for_types_page.dart';
 import 'pages/reactive_types/reactive_types_page.dart';
+import 'pages/workers/debounce/debounce_controller.dart';
+import 'pages/workers/debounce/debounce_page.dart';
 import 'pages/workers/ever/ever_controller.dart';
 import 'pages/workers/ever/ever_page.dart';
 import 'pages/workers/interval/interval_controller.dart';
@@ -65,6 +67,13 @@ class MyApp extends StatelessWidget {
             () => IntervalController(),
           ),
           page: () => IntervalPage(),
+        ),
+        GetPage(
+          name: '/workers/debounce',
+          binding: BindingsBuilder.put(
+            () => DebounceController(),
+          ),
+          page: () => DebouncePage(),
         ),
       ],
     );
