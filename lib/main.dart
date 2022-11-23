@@ -9,6 +9,9 @@ import 'pages/nullable_generics_reactive_type/nullable_generics_reactive_type_pa
 import 'pages/objects_update/objects_update_page.dart';
 import 'pages/obs_for_types/obs_for_types_page.dart';
 import 'pages/reactive_types/reactive_types_page.dart';
+import 'pages/workers/ever/ever_controller.dart';
+import 'pages/workers/ever/ever_page.dart';
+import 'pages/workers/workers_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +40,14 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/obs-for-types', page: () => ObsForTypesPage()),
         GetPage(name: '/objects-update', page: () => ObjectsUpdatePage()),
         GetPage(name: '/local-state', page: () => const LocalStatePage()),
+        GetPage(name: '/workers', page: () => const WorkersPage()),
+        GetPage(
+          name: '/workers/ever',
+          binding: BindingsBuilder.put(
+            () => EverController(),
+          ),
+          page: () => EverPage(),
+        ),
       ],
     );
   }
