@@ -19,6 +19,10 @@ class WorkersPage extends StatelessWidget {
               onPressed: () => Get.toNamed('/workers/ever'),
               child: const Text('Ever Worker'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/workers/once'),
+              child: const Text('Once Worker'),
+            ),
           ],
         ),
       ),

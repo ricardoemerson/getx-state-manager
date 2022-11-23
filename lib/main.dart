@@ -11,6 +11,8 @@ import 'pages/obs_for_types/obs_for_types_page.dart';
 import 'pages/reactive_types/reactive_types_page.dart';
 import 'pages/workers/ever/ever_controller.dart';
 import 'pages/workers/ever/ever_page.dart';
+import 'pages/workers/once/once_controller.dart';
+import 'pages/workers/once/once_page.dart';
 import 'pages/workers/workers_page.dart';
 
 void main() {
@@ -47,6 +49,13 @@ class MyApp extends StatelessWidget {
             () => EverController(),
           ),
           page: () => EverPage(),
+        ),
+        GetPage(
+          name: '/workers/once',
+          binding: BindingsBuilder.put(
+            () => OnceController(),
+          ),
+          page: () => OncePage(),
         ),
       ],
     );
