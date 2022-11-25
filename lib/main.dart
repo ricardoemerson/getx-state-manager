@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'pages/base_reactivity/base_reactivity_page.dart';
+import 'pages/first_rebuild/first_rebuild_page.dart';
 import 'pages/generics_reactive_type/generics_reactive_type_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/local_state/local_state_page.dart';
@@ -74,6 +75,10 @@ class MyApp extends StatelessWidget {
             () => DebounceController(),
           ),
           page: () => DebouncePage(),
+        ),
+        GetPage(
+          name: '/workers/first-rebuild',
+          page: () => const FirstRebuildPage(),
         ),
       ],
     );
