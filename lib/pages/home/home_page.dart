@@ -55,6 +55,10 @@ class HomePage extends StatelessWidget {
               onPressed: () => Get.toNamed('/get-builder'),
               child: const Text('GetBuilder'),
             ),
+            TextButton(
+              onPressed: () => Get.toNamed('/full-life-cycle'),
+              child: const Text('Full Life Cycle'),
+            ),
           ],
         ),
       ),

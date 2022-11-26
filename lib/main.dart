@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import 'pages/base_reactivity/base_reactivity_page.dart';
 import 'pages/first_rebuild/first_rebuild_page.dart';
+import 'pages/full_life_cycle/full_life_cycle_example_controller.dart';
+import 'pages/full_life_cycle/full_life_cycle_example_page.dart';
 import 'pages/generics_reactive_type/generics_reactive_type_page.dart';
 import 'pages/get_builder/get_builder_controller.dart';
 import 'pages/get_builder/get_builder_page.dart';
@@ -88,6 +90,13 @@ class MyApp extends StatelessWidget {
             () => GetBuilderController(),
           ),
           page: () => const GetBuilderPage(),
+        ),
+        GetPage(
+          name: '/full-life-cycle',
+          binding: BindingsBuilder.put(
+            () => FullLifeCycleExampleController(),
+          ),
+          page: () => const FullLifeCycleExamplePage(),
         ),
       ],
     );
