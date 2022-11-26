@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'pages/base_reactivity/base_reactivity_page.dart';
 import 'pages/first_rebuild/first_rebuild_page.dart';
 import 'pages/generics_reactive_type/generics_reactive_type_page.dart';
+import 'pages/get_builder/get_builder_controller.dart';
+import 'pages/get_builder/get_builder_page.dart';
 import 'pages/home/home_page.dart';
 import 'pages/local_state/local_state_page.dart';
 import 'pages/nullable_generics_reactive_type/nullable_generics_reactive_type_page.dart';
@@ -79,6 +81,13 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/workers/first-rebuild',
           page: () => const FirstRebuildPage(),
+        ),
+        GetPage(
+          name: '/get-builder',
+          binding: BindingsBuilder.put(
+            () => GetBuilderController(),
+          ),
+          page: () => const GetBuilderPage(),
         ),
       ],
     );
